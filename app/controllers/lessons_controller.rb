@@ -5,5 +5,6 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
+    @body = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@lesson.body)
   end
 end
