@@ -1,0 +1,5 @@
+<% @lessons.each do |lesson| %>
+  <div class="panel">
+    <p><%= link_to lesson.title, lesson_path(lesson) %></p>
+  </div>
+<% end %>
