@@ -6,7 +6,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
@@ -14,7 +14,7 @@
       </li>
     </ul>
 
-    <section class="top-bar-section">
+    <!-- <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -23,7 +23,7 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
-    </section>
+    </section> -->
   </nav>
 
   <%- flash.each do |key, value| -%>
@@ -32,7 +32,11 @@
     </div>
   <%- end -%>
 
-  <%= yield %>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= yield %>
+    </div>
+  </div>
 
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
