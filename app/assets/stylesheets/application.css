@@ -14,4 +14,13 @@
  *= require_self
  *= require foundation_and_overrides
 
+
  */
+
+ .background {
+   background-color: #1E7BC1
+ }
+
+ .whitetext {
+   color: #FFFFFF
+ }
