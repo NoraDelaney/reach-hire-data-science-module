@@ -25,20 +25,21 @@
       </ul>
     </section> -->
   </nav>
+  
+    <%- flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>">
+        <%= value %>
+      </div>
+    <%- end -%>
 
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= yield %>
+      </div>
     </div>
-  <%- end -%>
 
-  <div class="row">
-    <div class="small-12 columns">
-      <%= yield %>
-    </div>
-  </div>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :extra_footer %>
 
-  <%= javascript_include_tag 'application' %>
-  <%= yield :extra_footer %>
 </body>
 </html>
