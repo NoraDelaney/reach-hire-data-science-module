@@ -5,4 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Lesson.create(title: "Lesson 1", body: "Hello, **this** is bold again.")
+Lesson.create(title: "Excel Formulas", body: "**Creating formulas in Excel**
+You should be comfortable creating relative and absolute references.
+Relative references change when a formula is copied from one cell to another and absolute references do not change.
+Many of the formulas mix those types of references.")

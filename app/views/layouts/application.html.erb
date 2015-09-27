@@ -13,6 +13,9 @@
         <h1><a href="/">DataScienceModule</a></h1>
       </li>
     </ul>
+    <ul class="right">
+    <%= link_to "Return to all lessons", lessons_path, class: "button small" %>
+    </ul>
 
     <!-- <section class="top-bar-section">
       <ul class="right">
@@ -25,7 +28,7 @@
       </ul>
     </section> -->
   </nav>
-  
+
     <%- flash.each do |key, value| -%>
       <div class="flash flash-<%= key %>">
         <%= value %>
